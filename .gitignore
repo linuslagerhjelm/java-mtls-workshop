@@ -5,3 +5,7 @@
 *.ear
 *.nar
 hs_err_pid*
+root-ca/ca.key
+root-ca/ca.crt
+root-ca/api-gw
+root-ca/business-application
