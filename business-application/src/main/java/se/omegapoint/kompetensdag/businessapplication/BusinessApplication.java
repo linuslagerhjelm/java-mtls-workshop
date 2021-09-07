@@ -10,10 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.security.cert.CertificateExpiredException;
 import java.security.cert.CertificateNotYetValidException;
@@ -35,18 +31,6 @@ public class BusinessApplication extends WebSecurityConfigurerAdapter {
 				.x509()
 				.and()
 				.authenticationProvider(authenticationProvider());
-	}
-
-	@Bean
-	public UserDetailsService userDetailsService() {
-		return location -> {
-			if (location.equals("Umea")) {
-				return new User(location, "",
-						AuthorityUtils
-								.commaSeparatedStringToAuthorityList("ROLE_USER"));
-			}
-			throw new UsernameNotFoundException("User not found!");
-		};
 	}
 
 	@Bean
