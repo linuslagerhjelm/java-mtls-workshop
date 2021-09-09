@@ -75,4 +75,12 @@ __13. Install client cert in trust store__
     ```
 __14. Implement authentication provider__
   - Consult the code example
+
+__15. Exercise__
+1. Create a `.csr` for a new client cert
+2. Email the `.csr` to `<email>`
+3. Receive your client certificate and the root certificate in the response
+4. Use your client cert when making outgoing requests
+5. Install root-cert into trust-store on business-application
+6. Make requests to a friend 😃
   
