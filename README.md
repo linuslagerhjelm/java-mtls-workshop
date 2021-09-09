@@ -11,7 +11,7 @@ A recommendation is to make use of [SDKMAN](https://sdkman.io) to manage Java-re
 ## Get started:
 
 1. Clone this repo
-2. `cd business-application && gradlew bootRun`
-3. `cd api-gw && gradlew bootRun`
+2. `cd business-application && ./gradlew bootRun`
+3. `cd api-gw && ./gradlew bootRun`
 4. Access the business-application on [http://localhost:8080/api/hello](http://localhost:8080/api/hello)
 5. Access the api-gw on [http://localhost:8081/api/hello-client](http://localhost:8081/api/hello-client)
